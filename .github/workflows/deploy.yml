@@ -4,8 +4,7 @@
 # 必要に応じてタグのプッシュなどに変更します。
 on:
   push:
-    branches:
-      - master
+    - master
 jobs:
   deploy:
     runs-on: ubuntu-latest
