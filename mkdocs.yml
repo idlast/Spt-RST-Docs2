@@ -1,5 +1,4 @@
-site_name: My Docs
-
+site_name: Spt-RST-Docs
 theme:
   name: material
   palette:
