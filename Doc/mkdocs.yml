@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -18,11 +18,11 @@ jobs:
       - run: python -m pipenv run mkdocs build
       - uses: peaceiris/actions-gh-pages@v3
         with:
-          personal_token: ${{ secrets.PERSONAL_TOKEN }}
+          personal_token: ${{ secrets.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 }}
           # デプロイ元リポジトリーとデプロイ先が異なる場合、
           # external_repository を指定します。
-          external_repository: github-user-name/github-repository-name
+          external_repository: idlast/Spt-RST-Docs
           # publish_branch を指定しない場合、
           # gh-pages ブランチにデプロイされます。
-          publish_branch: master
+          publish_branch: main
           publish_dir: ./site
