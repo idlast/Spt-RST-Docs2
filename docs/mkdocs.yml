@@ -1,0 +1,29 @@
+site_name: otameshi
+theme:
+  name: material
+  language: ja
+  features:
+    - tabs
+  palette:
+    primary: indigo
+    accent: indigo
+markdown_extensions:
+  - codehilite
+  - footnotes
+  - meta
+  - admonition
+  - plantuml_markdown:
+      server: http://www.planturl.com/planturl
+extra:
+  search:
+    language: 'ja'
+plugins:
+  - git-revision-date-localized
+nav:
+  - Home:
+    - Top: index.md
+    - Hint:
+      - plantUML: about/hint-plantuml.md
+    - Build configuration: about/document-build.md
+  - Guides:
+    - architecture: design/architecture.md
