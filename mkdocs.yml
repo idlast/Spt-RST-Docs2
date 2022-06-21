@@ -2,11 +2,7 @@ site_name: My Docs
 
 theme:
   name: material
-  palette:
-    primary: cyan
-  features:
-    - content.code.annotate 
-
+  
 markdown_extensions:
   - pymdownx.highlight:
       use_pygments: true
