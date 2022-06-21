@@ -3,10 +3,10 @@ name: deploy
 on:
   push:
     branches:
-      - master
+      - main
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
