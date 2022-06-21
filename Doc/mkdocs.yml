@@ -1,28 +1,49 @@
-on:
-  push:
-    branches:
-      - main
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
-        with:
-          python-version: '3.8'
-      # Pipenv でパッケージ管理している場合を想定しています。
-      - run: python -m pip install pipenv
-      # Pipfile.lock を Git 管理に含めている場合を想定しています。
-      - run: python -m pipenv sync --dev
-      # まず、ビルドします。
-      - run: python -m pipenv run mkdocs build
-      - uses: peaceiris/actions-gh-pages@v3
-        with:
-          personal_token: ${{ secrets.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 }}
-          # デプロイ元リポジトリーとデプロイ先が異なる場合、
-          # external_repository を指定します。
-          external_repository: idlast/Spt-RST-Docs
-          # publish_branch を指定しない場合、
-          # gh-pages ブランチにデプロイされます。
-          publish_branch: main
-          publish_dir: ./site
+site_name: Spt-RST-Docs
+site_author: a
+site_description: aaa
+site_url: https://roy-n-roy.nyan-co.page/
+repo_name: Spt-RST-Docs
+repo_url: https://github.com/idlast/idlast.github.io
+remote_name: origin
+remote_branch: main
+#edit_uri: edit/release/docs/
+edit_uri: ''
+theme:
+  name: material
+  # logo: imgs/logo.svg
+  # /favicon: imgs/favicon.ico
+  # language: ja
+  # features:
+  #   - navigation.tabs
+  #   - navigation.expand
+  # palette:
+  #   scheme: preference
+  #   primary: deep orange
+  #   accent: amber
+markdown_extensions:
+  - admonition
+  - footnotes
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.details
+  - pymdownx.tilde
+plugins:
+  - search:
+      lang:
+        - ja
+  - git-revision-date-localized:
+      locale: ja
+  - minify:
+      minify_html: true
+# extra:
+#   social:
+#     - icon: fontawesome/brands/github
+#       link: https://github.com/roy-n-roy/
+#     - icon: fontawesome/brands/twitter
+#       link: https://twitter.com/roy_n_roy/
+#   analytics:
+#     provider: google
+#     property: !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TRACKING_ID"]
+extra_css:
+  - styles/style.css
