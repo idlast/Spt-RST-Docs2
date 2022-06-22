@@ -1,8 +1,8 @@
-# Welcome to MkDocs
+# Welcome to MkDocs { # Welcome to MkDocs }
 
 For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
-## Commands
+## Commands {: #Commands }
 
 * `mkdocs new [dir-name]` - Create a new project.
 * `mkdocs serve` - Start the live-reloading docs server.
@@ -11,6 +11,7 @@ For full documentation visit [mkdocs.org](https://www.mkdocs.org).
 
 ## Project layout
 
+    :sparkles:
     mkdocs.yml    # The configuration file.
     docs/
         index.md  # The documentation homepage.

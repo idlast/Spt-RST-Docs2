@@ -12,3 +12,17 @@ theme:
     code: Roboto Mono
   feature:
     tabs: true
+
+markdown_extensions:
+  - meta
+  - pymdownx.mark
+  - pymdownx.magiclink
+  - pymdownx.emoji
+  - pymdownx.keys
+  - pymdownx.superfences
+  - def_list
+  - admonition
+  - attr_list
+  - codehilite:
+      linenums: true
+      use_pygments: true
