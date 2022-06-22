@@ -1,0 +1,7 @@
+@startuml
+
+component ƒtƒƒ“ƒg as front
+
+front -> [SpotifyAPI]
+
+@enduml
