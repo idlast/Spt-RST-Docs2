@@ -1,4 +1,6 @@
 site_name: aa
+nav: 
+  - Home: index.md
 theme:
   name: material
   language: ja
