@@ -1,18 +1,13 @@
-# Welcome to MkDocs { # Welcome to MkDocs }
+# Docs { #Docs }
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+## 構成図
 
-## Commands {: #Commands }
+### 機能テスト
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
+[再生](構成図/機能テスト/再生/再生.md)
 
-## Project layout
+## IF設計
 
-    :sparkles:
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+### 機能テスト
+
+[再生](インターフェース設計/機能テスト/再生/再生.md)
